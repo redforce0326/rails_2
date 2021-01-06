@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PoteShare</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <header>
+    <div class ="header-left">
+      <a href ="/">
+      <img src ="https://presite-potepancamp-rails-02.herokuapp.com/assets/logo.png">
+      </a>
+
+      <%# form_with model:@room url:"/room/seach" do |form| %>
+       <div class ="seach-box">
+        <%#= form.text_field, :placeholder => "エリア" %>
+       </div>
+       <div class = "seach-box">
+        <%#= form.text_field, :placeholder => "キーワード"　%>
+       </div>
+      <%# end %>
+      
+    </div>
+    <div class ="header-right">
+      <div class ="sign-box">
+       <%#= link_to("ログイン","/users/sign_in") %>
+       <%#= link_to("新規登録","/users/sign_up") %>
+      </div>
+    </div>
+  </header>
+  <body>
+    <%= yield %>
+  </body>
+</html>
